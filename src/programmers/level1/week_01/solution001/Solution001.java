@@ -1,4 +1,4 @@
-package programmers.level1.week_01;
+package programmers.level1.week_01.solution001;
 
 import java.util.*;
 

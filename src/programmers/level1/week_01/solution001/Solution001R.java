@@ -1,8 +1,8 @@
-package programmers.level1.week_01;
+package programmers.level1.week_01.solution001;
 
 import java.util.*;
 
-class RSolution001 {
+class Solution001R {
     public String sol(String[] participant, String[] completion) {
         Map<String, Integer> map = new HashMap<>();
         for (String name : participant)
@@ -27,7 +27,7 @@ class RSolution001 {
         String[] participant = { "leo", "kiki", "eden" };
         String[] completion = { "eden", "kiki" };
 
-        RSolution001 solution = new RSolution001();
+        Solution001R solution = new Solution001R();
         String answer = solution.sol(participant, completion);
         System.out.println(answer);
     }
