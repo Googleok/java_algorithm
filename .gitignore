@@ -2,3 +2,4 @@
 .project
 org.*
 *.class
+\bin\programmers\level1\week_01\solution001\*.md
