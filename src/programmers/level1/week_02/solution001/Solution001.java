@@ -1,5 +1,8 @@
 package programmers.level1.week_02.solution001;
 
+/**
+ * 이 코드는 효율성도 Shit
+ */
 public class Solution001 {
     static int primeNumCnt = 0;
 

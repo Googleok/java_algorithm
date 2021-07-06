@@ -1,7 +1,7 @@
 package programmers.level1.week_02.solution001;
 
 /**
- * 리팩토링 할 건 없지만.. 시간을 너무 많이 사용함... 그냥 간단하게 삼중 for문 돌리면 될 걸 복잡하게 생각..
+ * 시간을 너무 많이 사용함... 그냥 간단하게 삼중 for문 돌리면 될 걸 복잡하게 생각..
  */
 public class Solution001R {
     static int answer = 0;
