@@ -1,10 +1,11 @@
-package programmers.level1.week_05;
+package programmers.level1.week_05.solution001;
 
 import java.util.Arrays;
 
-public class Solution001 {
+// 최선
+public class Solution001R {
     public static void main(String[] args) {
-        Solution001 sol = new Solution001();
+        Solution001R sol = new Solution001R();
         int[] arr = { 4, 3, 2, 1 };
         System.out.println(Arrays.toString(sol.solution(arr)));
     }
