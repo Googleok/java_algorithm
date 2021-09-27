@@ -1,57 +1,59 @@
 package programmers.level1.week_10.solution003;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Solution003 {
-    int answer;
-    boolean[] check = new boolean[10];
-    ArrayList<Integer> arr = new ArrayList<>();
+
+    public int answer = 0;
+    public boolean[] chk;
+    public String[] numStrings;
+    HashSet<Integer> set = new HashSet<>();
 
     public static void main(String[] args) {
         Solution003 sol = new Solution003();
-        System.out.println(sol.solution("17"));
+        System.out.println(sol.solution("1234"));
     }
 
     public int solution(String numbers) {
-        String tmp = "";
+        chk = new boolean[numbers.length()];
+
         for (int i = 0; i < numbers.length(); i++) {
-            dfs(numbers, tmp, i + 1);
+            combination(numbers, "", i + 1);
         }
-        for (int i = 0; i < arr.size(); i++) {
-            is_prime(arr.get(i));
+
+        for (Integer num : set) {
+            isPrime(num);
         }
+
         return answer;
     }
 
-    void dfs(String str, String tmp, int m) {
-        if (tmp.length() == m) {
-            int num = Integer.parseInt(tmp);
-            if (!arr.contains(num))
-                arr.add(num);
+    void combination(String numbers, String tmp, int numLength) {
+        if (tmp.length() == numLength && !set.contains(Integer.parseInt(tmp))) {
+            set.add(Integer.parseInt(tmp));
             return;
-        } else {
-            for (int i = 0; i < str.length(); i++) {
-                if (!check[i]) {
-                    check[i] = true;
-                    tmp += str.charAt(i);
-                    dfs(str, tmp, m);
-                    check[i] = false;
-                    tmp = tmp.substring(0, tmp.length() - 1);
-                }
+        }
+
+        for (int i = 0; i < numbers.length(); i++) {
+            if (!chk[i]) {
+                chk[i] = true;
+                tmp += numbers.substring(i, i + 1);
+                combination(numbers, tmp, numLength);
+                chk[i] = false;
+                tmp = tmp.substring(0, tmp.length() - 1);
             }
         }
     }
 
-    void is_prime(int n) {
-        if (n == 0)
+    void isPrime(Integer num) {
+        if (num == 0 || num == 1)
             return;
-        if (n == 1)
-            return;
-        for (int i = 2; i < n; i++) {
-            if (n % i == 0)
+
+        for (int i = 2; i < num; i++) {
+            if (num % i == 0)
                 return;
         }
+
         answer++;
     }
-
 }
