@@ -1,5 +1,8 @@
 package leetcode.easy;
 
+/**
+ * https://leetcode.com/problems/palindrome-number
+ */
 public class palindrome_number {
     public static void main(String[] args) {
         int x = 10;
