@@ -25,16 +25,15 @@ public class Solution003 {
             cBoard[i] = board[i].toCharArray();
         }
 
-        while (true) {
-            if (addDeletedBlock(cBoard, deleteBlock) == false) break;
+        while (addDeletedBlock(cBoard, deleteBlock)) {
             changeBlockToStar(cBoard, deleteBlock);
             changeLocation(cBoard);
             deleteBlock.clear();
         }
 
-        for (int i = 0; i < cBoard.length; i++) {
-            for (int j = 0; j < cBoard[i].length; j++) {
-                if (cBoard[i][j] == '*') answer++;
+        for (char[] chars : cBoard) {
+            for (char aChar : chars) {
+                if (aChar == '*') answer++;
             }
         }
 

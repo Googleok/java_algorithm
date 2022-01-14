@@ -47,9 +47,9 @@ public class Solution002 {
         }
 
         int idx = 0;
-        for (int i = 0; i < triangle.length; i++) {
-            for (int j = 0; j < triangle[i].length; j++) {
-                answer[idx++] = triangle[i][j];
+        for (int[] ints : triangle) {
+            for (int anInt : ints) {
+                answer[idx++] = anInt;
             }
         }
 

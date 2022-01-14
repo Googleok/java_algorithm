@@ -5,3 +5,4 @@ org.*
 bin/
 java_algorithm.iml
 .idea
+out
