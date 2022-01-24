@@ -9,8 +9,8 @@ import java.util.Arrays;
 public class Solution003 {
     public static void main(String[] args) {
         Solution003 sol = new Solution003();
-        int[] A = { 1, 4, 2 };
-        int[] B = { 5, 4, 4 };
+        int[] A = {1, 4, 2};
+        int[] B = {5, 4, 4};
         System.out.println(sol.solution(A, B));
     }
 
