@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class Solution001 {
     public static void main(String[] args) {
         Solution001 sol = new Solution001();
-        int[] arr = { 3, 4, 9, 16 };
+        int[] arr = {3, 4, 9, 16};
         System.out.println(sol.solution(arr));
     }
 
@@ -19,6 +19,7 @@ public class Solution001 {
         int div = 2;
         int lastArr = arr[arr.length - 1];
         boolean isDiv = true;
+
         while (div <= lastArr) {
             isDiv = false;
             for (int i = 0; i < arr.length; i++) {
